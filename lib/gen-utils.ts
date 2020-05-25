@@ -30,7 +30,7 @@ export function unqualifiedName(name: string, options: Options): string {
 export function qualifiedName(name: string, options: Options): string {
   const ns = namespace(name);
   const unq = unqualifiedName(name, options);
-  return ns ? typeName(ns) + unq : unq;
+  return ns ? typeName(ns) + "." + unq : unq;
 }
 
 /**
